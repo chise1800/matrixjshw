@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="product-list"></div>
+
+    <script>
+        let product = {
+            title: 'THE MATRIX',
+            directed: 'directed:by LANA WACHOWSKI LILY WACHOWSKI',
+            produced: 'produced:by JOEL SILVER',
+            starring: 'starring:KEANU REEVES CARRIE-ANNE MOSS LAWRENCE FISHBURNE',
+            mins: 'running time:136 minutes',
+            years: 1999,
+            photo: 'img/matrix.jpg'
+        };
+
+        const productList = document.querySelector('.product-list');
+
+        productList.innerHTML = `
+            <div class="product">
+                <img src="${product.photo}" alt="${product.title}">
+                <h2>${product.title}</h2>
+                <p>${product.directed}</p>
+                <p>${product.produced}</p>
+                <p>${product.starring}</p>
+                <p>${product.mins}</p>
+                <p class="year">${product.years}</p>
+            </div>
+        `;
+    </script>
+</body>
+
+</html>
